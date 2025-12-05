@@ -11,3 +11,4 @@
 | boolean | readyForSprint()    |
 # Ссылка на урок
 https://mentee-power.xl.ru/learn/MCIneBj4KkyH-GIRCspFvA/tasks
+# Git локальный цикл: шаги и команды
