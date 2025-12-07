@@ -11,3 +11,7 @@
 | boolean | readyForSprint()    |
 # Ссылка на урок
 https://mentee-power.xl.ru/learn/MCIneBj4KkyH-GIRCspFvA/tasks
+
+### Изменение: добавьте раздел «Git локальный цикл» и «Правило веток: feature/DVT‑X».
+- Сообщение: «Обновить README для локального Git».
+- Зачем: тренируем UI‑коммит и фиксируем правила.
