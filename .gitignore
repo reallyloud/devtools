@@ -1,3 +1,4 @@
+### Gradle Wrapper ###
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
@@ -18,6 +19,10 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+
+### OS files ###
+Thumbs.db
+.DS_Store
 
 ### Eclipse ###
 .apt_generated
@@ -41,5 +46,4 @@ bin/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
-.DS_Store
+
