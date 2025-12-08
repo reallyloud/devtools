@@ -1,14 +1,11 @@
-### Gradle Wrapper ###
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
-!gradle/wrapper/gradle-wrapper.properties
 !**/src/main/**/build/
 !**/src/test/**/build/
 .kotlin
 
 ### IntelliJ IDEA ###
-.idea/
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
@@ -19,10 +16,6 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-
-### OS files ###
-Thumbs.db
-.DS_Store
 
 ### Eclipse ###
 .apt_generated
@@ -46,4 +39,5 @@ bin/
 ### VS Code ###
 .vscode/
 
-
+### Mac OS ###
+.DS_Store

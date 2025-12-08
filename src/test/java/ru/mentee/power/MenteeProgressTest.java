@@ -8,23 +8,23 @@ class MenteeProgressTest {
 
     @Test
     void shouldFormatSummary_whenProgressCreated() {
-        MenteeProgress progress = new MenteeProgress("Ирина", 1, 8);
+        MenteeProgress progress = new MenteeProgress("Максим", 2, 20);
 
         String result = progress.summary();
 
-        assertThat(result).isEqualTo("Sprint 1 → Ирина: planned 8 h");
+        assertThat(result).isEqualTo("Sprint 2 → Максим: planned 20 h");
     }
 
     @Test
     void shouldDetectReadiness_whenHoursAboveThreshold() {
-        MenteeProgress progress = new MenteeProgress("Ирина", 1, 4);
+        MenteeProgress progress = new MenteeProgress("Максим", 1, 4);
 
         assertThat(progress.readyForSprint()).isTrue();
     }
 
     @Test
     void shouldDetectLackOfReadiness_whenHoursBelowThreshold() {
-        MenteeProgress progress = new MenteeProgress("Ирина", 1, 2);
+        MenteeProgress progress = new MenteeProgress("Максим", 1, 2);
 
         assertThat(progress.readyForSprint()).isFalse();
     }
