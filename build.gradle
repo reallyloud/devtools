@@ -1,6 +1,8 @@
 plugins {
     id 'java'
     id 'application'
+    id 'checkstyle'
+    id 'jacoco'
 }
 
 group = 'ru.mentee.power'
@@ -34,4 +36,21 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+tasks.withType(JacocoCoverageVerification) {
+    dependsOn 'jacocoTestReport' // Сначала делаем отчет
+    violationRules {
+        rule { // Правило для покрытия строк
+            limit {
+                minimum = 0.1 // Минимум 80% строк кода должно быть покрыто
+            }
+        }
+    }
+}
+
+
+checkstyle {
+    toolVersion = '10.12.5'
+    configFile = file('config/checkstyle/checkstyle.xml')
 }
