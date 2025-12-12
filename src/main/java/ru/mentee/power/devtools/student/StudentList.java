@@ -5,8 +5,6 @@ import java.util.List;
 
 public class StudentList {
     private List<Student> studentList;  // нарушение: snake_case
-    private int countStudent;
-    private String namingStudent;
 
     public StudentList() {
         studentList = new ArrayList<>();
@@ -19,10 +17,6 @@ public class StudentList {
         }
     } //
 
-    // нарушение: длинная строка (>120 символов)
-    public List<Student> soBigString(String city) {
-        return studentList.stream().filter(s -> s.city().equals(city)).toList();
-    }
 
     static void main() {
         StudentList studentList = new StudentList();

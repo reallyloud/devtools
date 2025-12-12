@@ -38,17 +38,26 @@ test {
     useJUnitPlatform()
 }
 
-tasks.withType(JacocoCoverageVerification) {
+jacocoTestReport {
+    dependsOn test  // отчёт генерируется после выполнения тестов
+    reports {
+        xml.required = false
+        csv.required = false
+        html.required = true
+        html.outputLocation = layout.buildDirectory.dir('reports/jacoco/test/html')
+    }
+}
+
+jacocoTestCoverageVerification {
     dependsOn 'jacocoTestReport' // Сначала делаем отчет
     violationRules {
         rule { // Правило для покрытия строк
             limit {
-                minimum = 0.1 // Минимум 80% строк кода должно быть покрыто
+                minimum = 0.4 // Минимум 80% строк кода должно быть покрыто
             }
         }
     }
 }
-
 
 checkstyle {
     toolVersion = '10.12.5'
