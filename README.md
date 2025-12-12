@@ -156,6 +156,28 @@ https://mentee-power.xl.ru/learn/MCIneBj4KkyH-GIRCspFvA/tasks
 **Почему плохо:** Нет объяснения почему лучше, нет примера как переписать,
 неясно какую проблему это решает.
 
+## Описание CI (Continuous integration)
+Все шаги в ci.yml файле, которые GitHub проходит на своей linux машине.
+#### Шаг 1: 
+actions/checkout@v4 — склонирование кода.
+#### Шаг 2: 
+run: chmod +x gradlew — обязательно! Устанавливает права на выполнение для Gradle Wrapper в Linux-окружении GitHub Actions. Без этого шага все команды ./gradlew упадут с ошибкой "Permission denied".
+#### Шаг 3: 
+actions/setup-java@v4 с параметрами:
+distribution: 'temurin'
+java-version: '25'
+(опционально) cache: 'gradle' для ускорения.
+#### Шаг 4: 
+run: ./gradlew --no-daemon checkstyleMain — проверка стиля.
+#### Шаг 5: 
+run: ./gradlew --no-daemon test — запуск тестов.
+#### Шаг 6: 
+run: ./gradlew --no-daemon jacocoTestReport — генерация отчёта покрытия.
+#### Шаг 7: 
+run: ./gradlew --no-daemon jacocoTestCoverageVerification — проверка порога покрытия (80%).
+#### Шаг 8: 
+run: ./gradlew --no-daemon build — сборка проекта.
+
 ## Результаты само-ревью DVT-9
 
 ### Найденные проблемы

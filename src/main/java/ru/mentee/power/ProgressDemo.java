@@ -7,8 +7,7 @@ public class ProgressDemo {
                 2,               // номер спринта
                 15                // запланированные часы на спринт
         );
-// Закомментированный
-// Код
+
         System.out.println(progress.summary());
         if (progress.readyForSprint()) {
             System.out.println("Status: sprint ready");
