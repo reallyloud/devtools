@@ -1,4 +1,7 @@
 # Quick Start
+# DevTools Project
+[![My Java CI](https://github.com/reallyloud/java-dev-tools/actions/workflows/ci.yml/badge.svg)](https://github.com/reallyloud/java-dev-tools/actions/workflows/ci.yml)
+
 ### Чтобы запустить задачи необходимо дважды нажать run, build или test через Gradle tool Window или Run Anything (ctrl + ctrl)
 # Packages
 ### Пакет ru.mentee.power нужен для порядка в проекте и правильной видимости классов
