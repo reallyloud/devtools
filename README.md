@@ -157,6 +157,8 @@ https://mentee-power.xl.ru/learn/MCIneBj4KkyH-GIRCspFvA/tasks
 неясно какую проблему это решает.
 
 ---
+## Личный глоссарий терминов Dev Tools
+
 ### Java-экосистема
 
 #### JDK — Java Development Kit
